@@ -1,0 +1,35 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8102:8102'
+    depends_on:
+      - rabbitmq
+      - mysql
+      - redis
+      - mongo
+  rabbitmq:
+    image: rabbitmq:3.8.17-management
+    ports:
+      - '5672:5672' # RabbitMQ port
+      - '15672:15672' # RabbitMQ management plugin port
+  mysql:
+    image: mysql:8.0.26
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678
+      MYSQL_DATABASE: project_bi
+      MYSQL_USER: nicky
+      MYSQL_PASSWORD: 12345678
+  redis:
+    image: redis:6.2.6
+    ports:
+      - '6379:6379'
+  mongo:
+    image: mongo:4.4.8
+    ports:
+      - '27017:27017'
