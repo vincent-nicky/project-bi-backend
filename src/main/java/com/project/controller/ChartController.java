@@ -288,7 +288,12 @@ public class ChartController {
         userInput.append(csvData).append("\n");
 
         long biModelId = CommonConstant.BI_MODEL_ID;
-        String result = aiManager.doChat(biModelId, userInput.toString());
+        String result = null;
+        try {
+            result = aiManager.doChat(biModelId, userInput.toString());
+        } catch (Exception e) {
+            throw new BusinessException(ErrorCode.SYSTEM_ERROR, "访问 鱼聪明 失败");
+        }
         String[] splits = result.split("【【【【【");
         if (splits.length < 3) {
             throw new BusinessException(ErrorCode.SYSTEM_ERROR, "AI 生成错误");
