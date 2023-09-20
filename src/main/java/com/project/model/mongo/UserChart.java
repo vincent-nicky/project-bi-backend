@@ -35,10 +35,6 @@ public class UserChart implements Serializable {
      */
     private String chartType;
     /**
-     * 图表数据
-     */
-    private String csvData;
-    /**
      * 生成的图表数据
      */
     private String genChart;

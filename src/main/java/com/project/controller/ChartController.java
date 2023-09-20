@@ -260,8 +260,8 @@ public class ChartController {
         long size = multipartFile.getSize();
         String originalFilename = multipartFile.getOriginalFilename();
         // 校验文件大小
-        final long ONE_MB = 1024 * 1024L;
-        ThrowUtils.throwIf(size > ONE_MB, ErrorCode.PARAMS_ERROR, "文件超过 1M");
+        final long ONE_MB = 3 * 1024 * 1024L;
+        ThrowUtils.throwIf(size > ONE_MB, ErrorCode.PARAMS_ERROR, "文件超过 3MB");
         // 校验文件后缀
         String suffix = FileUtil.getSuffix(originalFilename);
         final List<String> validFileSuffixList = Arrays.asList("xlsx", "xls");
@@ -306,7 +306,7 @@ public class ChartController {
         userChart.setChartName(name);
         userChart.setGoal(goal);
         userChart.setChartType(chartType);
-        userChart.setCsvData(csvData);
+        userChart.setChartData(csvData);
         userChart.setGenChart(genChart);
         userChart.setGenResult(genResult);
         userChart.setStatus("succeed");
@@ -341,8 +341,8 @@ public class ChartController {
         long size = multipartFile.getSize();
         String originalFilename = multipartFile.getOriginalFilename();
         // 校验文件大小
-        final long ONE_MB = 1024 * 1024L;
-        ThrowUtils.throwIf(size > ONE_MB, ErrorCode.PARAMS_ERROR, "文件超过 1M");
+        final long ONE_MB = 3 * 1024 * 1024L;
+        ThrowUtils.throwIf(size > ONE_MB, ErrorCode.PARAMS_ERROR, "文件超过 3MB");
         // 校验文件后缀 aaa.png
         String suffix = FileUtil.getSuffix(originalFilename);
         final List<String> validFileSuffixList = Arrays.asList("xlsx", "xls");
@@ -372,7 +372,7 @@ public class ChartController {
         UserChart userChart = new UserChart();
         userChart.setChartName(name);
         userChart.setGoal(goal);
-        userChart.setCsvData(csvData);
+        userChart.setChartData(csvData);
         userChart.setChartType(chartType);
         userChart.setStatus("wait");
         chartMongoService.save(loginUser.getId(), userChart);
@@ -435,8 +435,8 @@ public class ChartController {
         long size = multipartFile.getSize();
         String originalFilename = multipartFile.getOriginalFilename();
         // 校验文件大小
-        final long ONE_MB = 1024 * 1024L;
-        ThrowUtils.throwIf(size > ONE_MB, ErrorCode.PARAMS_ERROR, "文件超过 1M");
+        final long ONE_MB = 3 * 1024 * 1024L;
+        ThrowUtils.throwIf(size > ONE_MB, ErrorCode.PARAMS_ERROR, "文件超过 3MB");
         // 校验文件后缀 aaa.png
         String suffix = FileUtil.getSuffix(originalFilename);
         final List<String> validFileSuffixList = Arrays.asList("xlsx", "xls");
@@ -467,7 +467,7 @@ public class ChartController {
         UserChart userChart = new UserChart();
         userChart.setChartName(name);
         userChart.setGoal(goal);
-        userChart.setCsvData(csvData);
+        userChart.setChartData(csvData);
         userChart.setChartType(chartType);
         userChart.setStatus("wait");
         chartMongoService.save(loginUser.getId(), userChart);
