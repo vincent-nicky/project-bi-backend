@@ -12,7 +12,6 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 @Configuration
 @ConfigurationProperties(prefix = "spring.redis")
 @Data
-@EnableRedisHttpSession
 public class RedissonConfig {
     private Integer database;
     private String host;

@@ -21,8 +21,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @MapperScan("com.project.mapper")
 @EnableScheduling
 @EnableAspectJAutoProxy(proxyTargetClass = true, exposeProxy = true)
-@EnableRedisHttpSession
-@EnableWebMvc
 public class MainApplication {
 
     public static void main(String[] args) {
