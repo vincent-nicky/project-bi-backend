@@ -12,9 +12,9 @@ public class BiInitMain {
     public static void main(String[] args) {
         try {
             ConnectionFactory factory = new ConnectionFactory();
-            factory.setHost("");
+            factory.setHost("192.168.50.132");
             factory.setUsername("admin");
-            factory.setPassword("pulang662607");
+            factory.setPassword("admin");
             factory.setPort(5672);
             Connection connection = factory.newConnection();
             Channel channel = connection.createChannel();
