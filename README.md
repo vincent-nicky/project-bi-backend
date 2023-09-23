@@ -37,7 +37,7 @@
 
 上传数据并分析：
 
-![image-20230920152122148](https://cdn.jsdelivr.net/gh/vincent-nicky/image_store/blog/image-20230920152122148.png)
+![image-20230923175220219](https://cdn.jsdelivr.net/gh/vincent-nicky/image_store/blog/image-20230923175220219.png)
 
 查看当前用户已分析过的图表：
 
