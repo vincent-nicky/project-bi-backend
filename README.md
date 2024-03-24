@@ -31,14 +31,14 @@
 
 ## 四、项目架构图
 
-![img](https://cdn.jsdelivr.net/gh/vincent-nicky/image_store/blog/1687756290740-41ba43c4-24b3-400f-a77a-db9321e0a200.png)
+![img](https://cdn.jsdelivr.net/gh/vincenicky/image_store/blog/1687756290740-41ba43c4-24b3-400f-a77a-db9321e0a200.png)
 
 ## 五、运行展示
 
 上传数据并分析：
 
-![image-20230923175220219](https://cdn.jsdelivr.net/gh/vincent-nicky/image_store/blog/image-20230923175220219.png)
+![image-20230923175220219](https://cdn.jsdelivr.net/gh/vincenicky/image_store/blog/image-20230923175220219.png)
 
 查看当前用户已分析过的图表：
 
-![image-20230920152207398](https://cdn.jsdelivr.net/gh/vincent-nicky/image_store/blog/image-20230920152207398.png)
+![image-20230920152207398](https://cdn.jsdelivr.net/gh/vincenicky/image_store/blog/image-20230920152207398.png)
